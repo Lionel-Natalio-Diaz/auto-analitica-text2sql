@@ -711,7 +711,7 @@ const App = () => {
                 <div className="chart-container wide">
                   <h3>Evolución Mensual: Márgenes Nominal vs Real</h3>
                   <div style={{ width: '100%', height: 300 }}>
-                    <ResponsiveContainer>
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                       <LineChart data={trends} margin={{ top: 10, right: 10, left: 25, bottom: 10 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                         <XAxis dataKey="mes_venta" stroke="#94a3b8" />
@@ -732,7 +732,7 @@ const App = () => {
                 <div className="chart-container">
                   <h3>Ventas por Región</h3>
                   <div style={{ width: '100%', height: 300 }}>
-                    <ResponsiveContainer>
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                       <BarChart data={regions} margin={{ top: 10, right: 10, left: 30, bottom: 10 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                         <XAxis dataKey="region" stroke="#94a3b8" interval={0} fontSize={11} angle={-20} textAnchor="end" height={45} />
@@ -752,7 +752,7 @@ const App = () => {
                 <div className="chart-container">
                   <h3>Margen Nominal vs Real por Categoría</h3>
                   <div style={{ width: '100%', height: 300 }}>
-                    <ResponsiveContainer>
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                       <BarChart data={categories} margin={{ top: 10, right: 10, left: 30, bottom: 10 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
                         <XAxis dataKey="categoria" stroke="#94a3b8" interval={0} fontSize={11} angle={-20} textAnchor="end" height={45} />
@@ -773,7 +773,7 @@ const App = () => {
                 <div className="chart-container wide">
                   <h3>Ranking Vendedores (Margen Real)</h3>
                   <div style={{ width: '100%', height: 380 }}>
-                    <ResponsiveContainer>
+                    <ResponsiveContainer width="100%" height="100%" minWidth={0}>
                       <BarChart data={salespeople} layout="vertical" margin={{ left: 150, right: 20, top: 10, bottom: 10 }}>
                         <CartesianGrid strokeDasharray="3 3" stroke="#334155" horizontal={false} />
                         <XAxis type="number" stroke="#94a3b8" hide />
