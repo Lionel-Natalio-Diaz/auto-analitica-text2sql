@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: main
+    tables:
+      - name: raw_clientes
+      - name: raw_productos
+      - name: raw_ventas
+      - name: raw_ipc
+      - name: raw_sucursales
+      - name: raw_vendedores
+      - name: raw_compras

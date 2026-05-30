@@ -1,0 +1,11 @@
+dbt_sqlite_profile:
+  target: dev
+  outputs:
+    dev:
+      type: sqlite
+      threads: 1
+      database: 'data'
+      schema: 'main'
+      schemas_and_paths:
+        main: '../data.db'
+      schema_directory: '../'

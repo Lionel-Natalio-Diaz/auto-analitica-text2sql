@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+.env
+
+# Database
+*.db
+*.sqlite
+
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# dbt
+dbt_analytics/target/
+dbt_analytics/dbt_packages/
+dbt_analytics/logs/
+
+# IDEs
+.vscode/
+.idea/
+
+# Scratch & Dev experiments
+/scratch/
+.playwright-mcp/

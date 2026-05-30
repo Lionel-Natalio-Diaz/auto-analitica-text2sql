@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+langchain
+langchain-openai
+pandas
+sqlalchemy
+python-dotenv
+pydantic
+pypdf
+faker
+requests
+dbt-core
+dbt-sqlite
+pytest
+httpx

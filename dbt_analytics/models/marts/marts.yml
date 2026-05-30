@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_ventas
+    columns:
+      - name: venta_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_ventas_inflacion
+    columns:
+      - name: venta_id
+        tests:
+          - unique
+          - not_null
+      - name: margen_real
+        description: "El margen real ajustado por inflación"
+        tests:
+          - not_null
