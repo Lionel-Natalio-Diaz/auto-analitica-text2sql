@@ -6,11 +6,9 @@
 [![SQLite](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
 [![OpenAI GPT-4o](https://img.shields.io/badge/GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
-[![Coolify](https://img.shields.io/badge/Coolify-ED6A45?style=for-the-badge&logo=coolify&logoColor=white)](https://coolify.io/)
-
 AutoAnalítica Pro es una plataforma analítica end-to-end orientada a la venta minorista de repuestos y accesorios automotrices. Integra **Ingeniería de Datos moderna (dbt + SQLite)**, una **API REST (FastAPI)**, un **dashboard interactivo premium con interfaz Glassmorphic (React + Recharts)** y un **Agente Inteligente Text-to-SQL** diseñado bajo estrictos protocolos de seguridad para traducir lenguaje natural a consultas SQL sin riesgo de inyección o alteración de datos.
 
-🔗 **Demo de la Aplicación Web:** [https://tu-dominio-vps.com](https://tu-dominio-vps.com) *(Reemplaza con tu URL)*
+🔗 **Demo de la Aplicación Web:** [https://autoanalitica.lioneldiaz.com](https://autoanalitica.lioneldiaz.com)
 
 ---
 
@@ -166,24 +164,3 @@ npm install
 npm run dev
 # La aplicación web estará lista en http://localhost:5173
 ```
-
----
-
-## ☁️ 6. Despliegue en Producción con Coolify (VPS)
-
-Para desplegar esta aplicación en producción en tu propio servidor VPS utilizando **Coolify**, sigue estas buenas prácticas de seguridad:
-
-### Configuración del Backend en Coolify:
-1.  Crea una aplicación de tipo **Python / FastAPI** en tu panel de Coolify conectada a tu repositorio de GitHub.
-2.  **Variables de Entorno (Secrets):**
-    *   **NUNCA** subas tus archivos `.env` a GitHub.
-    *   En la sección **Variables** del servicio del backend en Coolify, define de forma segura:
-        *   `OPENAI_API_KEY` (tu API key privada de OpenAI).
-        *   `DATABASE_URL` (ruta a la base de datos persistente en tu VPS, ej: `sqlite:////data/data.db`).
-3.  **Persistencia del almacenamiento:**
-    *   Configura un volumen en Coolify para que la base de datos `data.db` sea persistente y no se pierda al reconstruir el contenedor.
-
-### Configuración del Frontend en Coolify:
-1.  Crea un recurso de tipo **Static / Node.js (React)** en Coolify.
-2.  Configura la variable `VITE_API_BASE` apuntando al dominio o IP de tu backend expuesto (ej: `https://api.tu-plataforma.com/api`).
-3.  El navegador web del cliente solo se comunicará con el backend expuesto a través de solicitudes HTTP. **La API Key de OpenAI permanece 100% segura en el lado del servidor VPS (dentro de tu backend)** y nunca es enviada o expuesta al cliente.
